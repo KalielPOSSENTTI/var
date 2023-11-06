@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATV</title>
+</head>
+<body>
+
+    <h1>Verificação de pontos</h1>
+
+    <label for="pontos">Digite sua pontuação</label>
+    <input type="text" id="pontos">
+    <button onclick="calcularPontos()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularPontos() {
+            var pontos = document.getElementById("pontos").value;
+            if (pontos >= 2000) {
+                document.getElementById("resultado").innerHTML = "Você pode enfrentar o Boss";
+            } else {
+                document.getElementById("resultado").innerHTML = "Você não pode enfrentar o Boss";
+            }
+        }
+    </script>
+</body>
+</html>
